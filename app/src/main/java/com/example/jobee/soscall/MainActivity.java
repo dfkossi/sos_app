@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
                     else if(finalI==1){
 
                         Intent intent= new Intent(Intent.ACTION_DIAL);
-                        String hospital = "115";
+                        String hospital = "114";
                         intent.setType("Police");
                         intent.setData(Uri.parse("tel:"+hospital));
                         startActivity(intent);
@@ -184,7 +184,6 @@ public class MainActivity extends AppCompatActivity {
 
                         Toast.makeText(MainActivity.this, "Je suis dans la trape 6", Toast.LENGTH_SHORT).show();
                     }
-
                 }
             });
         }
