@@ -10,10 +10,10 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="103dp"
+        android:id="@+id/textView_City"
+        android:layout_width="203dp"
         android:layout_height="36dp"
-        android:text="VIETNAM"
+        android:text=""
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="18dp"
@@ -27,25 +27,24 @@
     <GridLayout
         android:id="@+id/mainGrid"
         android:layout_width="match_parent"
-        android:layout_height="383dp"
+        android:layout_height="412dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:alignmentMode="alignMargins"
         android:columnCount="3"
         android:columnOrderPreserved="true"
-        android:padding="14dp"
+        android:padding="5dp"
         android:rowCount="5"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintVertical_bias="0.6"
+        tools:ignore="MissingConstraints">
 
         <!--Colum 1-->
         <android.support.v7.widget.CardView
             android:layout_width="40dp"
             android:layout_height="50dp"
-
             android:layout_columnWeight="1"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
@@ -65,8 +64,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/police"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:src="@drawable/police" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -103,8 +102,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/hospital"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:src="@drawable/hospital" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -119,9 +118,8 @@
 
         <!--Colum 3-->
         <android.support.v7.widget.CardView
-            android:layout_width="40dp"
+            android:layout_width="37dp"
             android:layout_height="50dp"
-
             android:layout_columnWeight="1"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
@@ -141,8 +139,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/camion"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:src="@drawable/camion" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -179,8 +177,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/camera_lens"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:src="@drawable/camera_lens" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -217,8 +215,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/reduser"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:src="@drawable/reduser" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -255,15 +253,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/books"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:src="@drawable/books" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-45dp"
                     android:gravity="center"
-                    android:text="CONSEIL"
+                    android:text="CONSEILS"
                     android:textColor="@android:color/holo_red_dark" />
 
             </LinearLayout>

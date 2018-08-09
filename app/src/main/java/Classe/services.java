@@ -2,6 +2,7 @@ package Classe;
 
 public class services {
     String name;
+    String pays;
     Integer number;
     String Email;
 
@@ -11,12 +12,17 @@ public class services {
 
     public services(String name, Integer number, String email) {
         this.name = name;
+        this.pays=pays;
         this.number = number;
         Email = email;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getPays() {
+        return pays;
     }
 
     public Integer getNumber() {
@@ -31,6 +37,10 @@ public class services {
         this.name = name;
     }
 
+    public void setPays(String pays) {
+        this.pays = pays;
+    }
+
     public void setNumber(Integer number) {
         this.number = number;
     }
@@ -41,6 +51,6 @@ public class services {
 
     @Override
     public String toString() {
-        return "services{" + "name:'" + name + '\'' + ", number:" + number + ", Email:'" + Email + '\'' + '}';
+        return "services{" + "Name:'" + name + "\n ,Pays:'" + pays +"\n, Number:" + number + "\n, Email:'" + Email +"\n"+ '}';
     }
 }
