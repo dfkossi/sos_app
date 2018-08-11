@@ -6,6 +6,31 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_info_med">InfoMed</string>
     <string name="title_home">Home</string>
+    <string name="title_Advices">Conseil</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_add_info_med">Add_infoMed</string>
+
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GO</string>
+
+    <string name="slide_1_title">Bienvenue</string>
+    <string name="slide_1_desc">Bienvenue sur l\'application SOS call. Cet application vise à vous aider en territoire o vous avez aucune idee des numero d\'urgence et permettre a des personne autoure de voou de vous aider. Veuillez Suivre les conseils  </string>
+
+    <string name="slide_2_title">force de police</string>
+    <string name="slide_2_desc">En tout cas de violence, de desordre et de nom respect des loi, appellez rapidement la police.</string>
+
+    <string name="slide_3_title">Urgence medicale</string>
+    <string name="slide_3_desc">En tout cas d\'accident qui necessite l\'inervention d\'un medecin, veuillez ne pas paniquer et appellez d'urgence l\'hopital </string>
+
+    <string name="slide_4_title">Feu</string>
+    <string name="slide_4_desc">Tout cas d\'incendit qui ne peut etre controlé, n\'hesitez pas, appellez tout de suite les pompiers.</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
 </resources>

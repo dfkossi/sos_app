@@ -8,18 +8,22 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.location.Geocoder;
@@ -28,7 +32,6 @@ import org.w3c.dom.Text;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,15 +80,17 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, " Ville non trouvé1", Toast.LENGTH_SHORT).show();
             }
         }
+
     }
 
 
-    //Avoir le nom de la ville
+///////Avoir le nom de la ville /////////////////////////////////////////////////
     public String Ind_location(double lat, double lon){
         String currenCity="";
         String locality="";
         String Country="";
-        Geocoder geocoder=new Geocoder(MainActivity.this, Locale.getDefault());
+        Geocoder geocoder=
+                new Geocoder(MainActivity.this, Locale.getDefault());
         List<Address> addressList;
         try{
             addressList=geocoder.getFromLocation(lat, lon, 1);
@@ -97,12 +102,10 @@ public class MainActivity extends AppCompatActivity {
         }
         catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(MainActivity.this, " Ville non trouvé ou mauvaise connection Internet", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Mauvaise connection Internet", Toast.LENGTH_SHORT).show();
         }
-
         return currenCity;
     }
-
 
 
     @Override
@@ -118,20 +121,22 @@ public class MainActivity extends AppCompatActivity {
                                textView.setText(Ind_location(location.getLatitude(), location.getLongitude()));
                            }catch (Exception e){
                                e.printStackTrace();
-                               Toast.makeText(MainActivity.this, " Ville non trouvé1", Toast.LENGTH_SHORT).show();
+                               Toast.makeText(MainActivity.this, " Ville non trouvé", Toast.LENGTH_SHORT).show();
                            }
 
                        }
                 }else {
+
                     Toast.makeText(this, " No Permission Granted", Toast.LENGTH_SHORT).show();
+
                 }
             }
         }
     }
-    
+ /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-   //Partie qui gere l'evenement des cardViews dans le Main page
+//Partie qui gere l'evenement des cardViews dans le Main Intent
     private void setSingleEvent(GridLayout manh) {
         for(int i=0;i<manh.getChildCount();i++){
             CardView cardView=(CardView)manh.getChildAt(i);
@@ -152,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     else if(finalI==1){
-
                         Intent intent= new Intent(Intent.ACTION_DIAL);
                         String hospital = "114";
                         intent.setType("Police");
@@ -176,13 +180,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else if(finalI==4){
 
-                       // Intent intent=new Intent(MainActivity.this,InfoMed.class);
-                       // startActivity(intent);
+                        Intent intent=new Intent(MainActivity.this,Add_infoMed.class);
+                        startActivity(intent);
                         Toast.makeText(MainActivity.this, "Je suis dans la trape 5", Toast.LENGTH_SHORT).show();
                     }
                     else if(finalI==5){
 
-                        Toast.makeText(MainActivity.this, "Je suis dans la trape 6", Toast.LENGTH_SHORT).show();
+                         Intent intent=new Intent(MainActivity.this,Advices.class);
+                         startActivity(intent);
+                      //  Toast.makeText(MainActivity.this, "Je suis dans la trape 6", Toast.LENGTH_SHORT).show();
                     }
                 }
             });

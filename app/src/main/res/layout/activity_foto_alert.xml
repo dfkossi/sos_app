@@ -6,49 +6,65 @@
     android:layout_height="match_parent"
     android:padding="5dp"
     android:orientation="vertical"
+    android:weightSum="10"
     tools:context=".FotoAlert">
 
    <ImageView
        android:id="@+id/imageView"
        android:layout_weight="9"
        android:padding="2dp"
-       android:layout_width="wrap_content"
-       android:layout_height="fill_parent"
-       android:layout_margin="5dp"/>
+       android:layout_width="match_parent"
+       android:layout_height="fill_parent"/>
 
-
-
-
-   <GridLayout
+    <!--  <GridLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:accessibilityTraversalAfter="@id/imageView">
+    -->
 
-       <Button
-           android:id="@+id/btncam"
-           android:layout_width="187dp"
+
+       <TextView
+           android:id="@+id/textpoint"
+           android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:layout_columnWeight="0"
-           android:layout_row="0"
            android:layout_weight="1"
-           android:background="@color/colorAccent"
-           android:text="Camera"
+           android:text=""
            android:textAlignment="center"
-           android:textColor="@color/cardview_light_background" />
+           android:textColor="@color/colorAccent" />
 
     <Button
-        android:id="@+id/btnbrowse"
-        android:layout_weight="1"
-        android:layout_width="100dp"
+        android:id="@+id/btnenvoie"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:text="ENVOYER"
-        android:layout_row="0"
-        android:layout_columnWeight="1"
-        android:textColor="@color/cardview_light_background"
+        android:layout_weight="1"
+        android:text="Envoyer"
         android:textAlignment="center"
-        android:padding="1dp"/>
+        android:textColor="@color/bg_screen1" />
 
-   </GridLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabcam"
+        android:layout_width="57dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@android:color/holo_red_dark"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="bottom|center"
+        app:srcCompat="@android:drawable/ic_menu_camera"/>
+    <!-- <Button
+         android:id="@+id/btnbrowse"
+         android:layout_weight="1"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:background="@color/colorAccent"
+         android:text="ENVOYER"
+         android:layout_row="0"
+         android:layout_columnWeight="1"
+         android:textColor="@color/cardview_light_background"
+         android:textAlignment="center"
+         android:padding="1dp"/>
+
+    </GridLayout>   -->
 
 </LinearLayout>
