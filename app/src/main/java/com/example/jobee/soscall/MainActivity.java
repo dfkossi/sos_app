@@ -48,15 +48,17 @@ public class MainActivity extends AppCompatActivity {
         mainGrid = (GridLayout) findViewById(R.id.mainGrid);
         setSingleEvent(mainGrid);
 
+         /// Mise en place View pour
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Cette partie va etre remplacer fLoattngFab circle", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+
             }
         });
 
+
+///////Permission location//////////////////////////////////////////////////////////////////////////////////////////////
         textView = (TextView) findViewById(R.id.textView_City);
 
         if (ContextCompat.checkSelfPermission(MainActivity.this,
@@ -80,11 +82,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, " Ville non trouvé1", Toast.LENGTH_SHORT).show();
             }
         }
-
     }
 
 
-///////Avoir le nom de la ville /////////////////////////////////////////////////
+///////Avoir le nom de la ville ///////////////////////////////////////////////////////////////////////////////////////////
     public String Ind_location(double lat, double lon){
         String currenCity="";
         String locality="";
@@ -97,7 +98,8 @@ public class MainActivity extends AppCompatActivity {
             if(addressList.size()>0){
                 locality=addressList.get(0).getLocality();
                 Country =addressList.get(0).getCountryName();
-                currenCity =locality+", "+Country;
+                //currenCity =locality+", "+Country;
+                currenCity = Country;
             }
         }
         catch (IOException e) {
@@ -107,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         return currenCity;
     }
 
-
+    
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch(requestCode){
@@ -134,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 //Partie qui gere l'evenement des cardViews dans le Main Intent
@@ -182,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Intent intent=new Intent(MainActivity.this,Add_infoMed.class);
                         startActivity(intent);
-                        Toast.makeText(MainActivity.this, "Je suis dans la trape 5", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, "Je suis dans la trape 5", Toast.LENGTH_SHORT).show();
                     }
                     else if(finalI==5){
 
