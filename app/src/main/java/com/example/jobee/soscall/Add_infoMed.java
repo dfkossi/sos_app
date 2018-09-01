@@ -24,7 +24,6 @@ public class Add_infoMed extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabinfomed);
         fab.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -60,9 +59,7 @@ public class Add_infoMed extends AppCompatActivity {
                     dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                     dialog.show();
 
-
                 }
-
 
 
         });

@@ -27,7 +27,7 @@ import java.util.Locale;
 public class FotoAlert extends AppCompatActivity {
 
     ImageView imageView;
-    TextView textpoint, textAlert;
+   // TextView textpoint, textAlert;
     Button btnSend;
     Button btnEnvoie ;
 
@@ -38,12 +38,13 @@ public class FotoAlert extends AppCompatActivity {
         setContentView(R.layout.activity_foto_alert);
 
          imageView=(ImageView)findViewById(R.id.imageView);
-         textpoint=(TextView) findViewById(R.id.textpoint);
+        // textpoint=(TextView) findViewById(R.id.textpoint);
          btnSend=(Button) findViewById(R.id.btnenvoie);
-         textpoint.setText("Cliquez sur le button camera pour prendre une la photo...");
+         //textpoint.setText("Cliquez sur le button camera pour prendre une la photo...");
 
         // btnSend.isEnabled()=true;
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabcam);
+
+   /*     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabcam);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,15 +52,15 @@ public class FotoAlert extends AppCompatActivity {
                 Intent intent =new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent,0);
             }
-        });
+        });   */
     }
 
 
-    @Override
+  /*  @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Bitmap bitmap = (Bitmap) data.getExtras().get("data");
         imageView.setImageBitmap(bitmap);
-        textpoint.setText("Vous pouvez soit, l'envoyer par mail ou reprendre la photo...");
+       // textpoint.setText("Vous pouvez soit, l'envoyer par mail ou reprendre la photo...");
 
         btnEnvoie.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,5 +84,5 @@ public class FotoAlert extends AppCompatActivity {
             }
 
         });
-    }
+    }   */
 }

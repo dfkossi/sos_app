@@ -73,25 +73,22 @@ public class Advices extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  launchHomeScreen();
-                Intent returnBtn = new Intent("android.intent.action.MAIN");
-                startActivity(returnBtn);
+                launchHomeScreen();
+
             }
         });
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // checking for last page
+                // check pour la derniere page
                 // if last page home screen will be launched
                 int current = getItem(+1);
                 if (current < layouts.length) {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                   // launchHomeScreen();
-                    Intent returnBtn = new Intent("android.intent.action.MAIN");
-                    startActivity(returnBtn);
+                    launchHomeScreen();
                 }
             }
         });
@@ -179,7 +176,6 @@ public class Advices extends AppCompatActivity {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
             View view = layoutInflater.inflate(layouts[position], container, false);
             container.addView(view);
 

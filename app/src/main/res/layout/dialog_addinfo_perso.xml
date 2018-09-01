@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:isScrollContainer="true">
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:padding="12dp">
 
 
-<!--Informations Personnelles-->
+    <!--Informations Personnelles-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
         android:layout_marginLeft="5dp"
         android:text="Informations"
-        android:layout_margin="5dp"
-        android:layout_gravity="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:textStyle="bold" />
 
@@ -21,48 +22,49 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
         android:text="Nom : "
-        android:layout_gravity="left"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/textNomP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
-        android:inputType="text"
-        android:layout_gravity="left" />
+        android:inputType="text" />
 
-<!--Prenom Personne-->
+    <!--Prenom Personne-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
         android:text="Prénom : "
-        android:layout_gravity="left"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/textprenomP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
-        android:inputType="text"
-        android:layout_gravity="left" />
+        android:inputType="text" />
 
     <!--Sexe Personne-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
         android:text="Sexe: "
-        android:layout_gravity="left"
         android:textStyle="bold" />
 
     <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
 
         <RadioButton
             android:id="@+id/radioButton"
@@ -79,121 +81,119 @@
             android:text="Féminin" />
     </RadioGroup>
 
-<!--information personne Responsable-->
-
+    <!--information personne Responsable-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
         android:layout_marginLeft="5dp"
         android:text="Personne responsable"
-        android:layout_margin="5dp"
-        android:layout_gravity="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat"
         android:textStyle="bold" />
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
         android:text="Nom : "
-        android:layout_gravity="left"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/textNomPR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_gravity="left" />
+        android:layout_gravity="left"
+        android:layout_marginLeft="15dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
         android:text="Prénom : "
-        android:layout_gravity="left"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/textPrenomPR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
-        android:inputType="text"
-        android:layout_gravity="left" />
+        android:inputType="text" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
         android:text="Phone : "
-        android:layout_gravity="left"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/textPhonePR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
-        android:inputType="phone"
-        android:layout_gravity="left" />
+        android:inputType="phone" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
         android:text="Lien de parenté: "
-        android:layout_gravity="left"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/textLParentePR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
-        android:inputType="phone"
-        android:layout_gravity="left" />
+        android:inputType="phone" />
 
 
-    <!--information personne Responsable-->
+    <!--information personne Medicale-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
         android:layout_marginLeft="5dp"
         android:text="Information Médicale"
-        android:layout_margin="5dp"
-        android:layout_gravity="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
         android:text="Groupe sanguin : "
-        android:layout_gravity="left"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
         android:text="Docteur : "
-        android:layout_gravity="left"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="15dp"
         android:layout_toRightOf="@id/imageView3"
         android:text="Antecedent Medical : "
-        android:layout_gravity="left"
         android:textStyle="bold" />
 
-
+    -->
 
 
 </LinearLayout>

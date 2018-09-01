@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,14 +16,8 @@
        android:layout_width="match_parent"
        android:layout_height="fill_parent"/>
 
-    <!--  <GridLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:accessibilityTraversalAfter="@id/imageView">
-    -->
-
-
-       <TextView
+    
+     <TextView
            android:id="@+id/textpoint"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
@@ -52,19 +46,6 @@
         app:layout_anchor="@+id/include"
         app:layout_anchorGravity="bottom|center"
         app:srcCompat="@android:drawable/ic_menu_camera"/>
-    <!-- <Button
-         android:id="@+id/btnbrowse"
-         android:layout_weight="1"
-         android:layout_width="100dp"
-         android:layout_height="wrap_content"
-         android:background="@color/colorAccent"
-         android:text="ENVOYER"
-         android:layout_row="0"
-         android:layout_columnWeight="1"
-         android:textColor="@color/cardview_light_background"
-         android:textAlignment="center"
-         android:padding="1dp"/>
 
-    </GridLayout>   -->
 
-</LinearLayout>
+</ScrollView>

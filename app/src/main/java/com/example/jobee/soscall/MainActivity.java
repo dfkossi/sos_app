@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 ///////Permission location//////////////////////////////////////////////////////////////////////////////////////////////
-        textView = (TextView) findViewById(R.id.textView_City);
+       textView = (TextView) findViewById(R.id.textView_City);
 
         if (ContextCompat.checkSelfPermission(MainActivity.this,
                 Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
@@ -76,22 +76,22 @@ public class MainActivity extends AppCompatActivity {
             LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             Location location = locationManager.getLastKnownLocation(locationManager.NETWORK_PROVIDER);
             try {
-                textView.setText(Ind_location(location.getLatitude(), location.getLongitude()));
+               textView.setText(Ind_location(location.getLatitude(), location.getLongitude()));
             } catch (Exception e) {
                 e.printStackTrace();
-                Toast.makeText(MainActivity.this, " Ville non trouvé1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Ville non trouvée", Toast.LENGTH_SHORT).show();
             }
         }
+
     }
 
 
 ///////Avoir le nom de la ville ///////////////////////////////////////////////////////////////////////////////////////////
-    public String Ind_location(double lat, double lon){
+   public String Ind_location(double lat, double lon){
         String currenCity="";
         String locality="";
         String Country="";
-        Geocoder geocoder=
-                new Geocoder(MainActivity.this, Locale.getDefault());
+        Geocoder geocoder=new Geocoder(MainActivity.this, Locale.getDefault());
         List<Address> addressList;
         try{
             addressList=geocoder.getFromLocation(lat, lon, 1);
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         return currenCity;
     }
 
-    
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch(requestCode){
@@ -136,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 
 //Partie qui gere l'evenement des cardViews dans le Main Intent
@@ -193,10 +192,10 @@ public class MainActivity extends AppCompatActivity {
                          startActivity(intent);
                       //  Toast.makeText(MainActivity.this, "Je suis dans la trape 6", Toast.LENGTH_SHORT).show();
                     }
+
                 }
             });
         }
     }
-
 
 }
