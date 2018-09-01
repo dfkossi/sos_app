@@ -13,7 +13,7 @@
         android:id="@+id/textView_City"
         android:layout_width="203dp"
         android:layout_height="36dp"
-        android:text="Pays"
+        android:text="Pays non trouvé"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="18dp"
@@ -25,31 +25,34 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         app:layout_constraintVertical_bias="0.145" />
 
-     <GridLayout
-         android:id="@+id/mainGrid"
-         android:layout_width="match_parent"
-         android:layout_height="412dp"
-         android:layout_marginBottom="8dp"
-         android:layout_marginTop="4dp"
-         android:alignmentMode="alignMargins"
-         android:columnCount="3"
-         android:columnOrderPreserved="true"
-         android:padding="5dp"
-         android:rowCount="5"
-         app:layout_constraintBottom_toBottomOf="parent"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintTop_toTopOf="parent"
-         app:layout_constraintVertical_bias="0.6"
-         tools:ignore="MissingConstraints">
+    <GridLayout
+        android:id="@+id/mainGrid"
+        android:layout_width="match_parent"
+        android:layout_height="413dp"
+        android:layout_below="@+id/textView_City"
+
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginTop="4dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:columnOrderPreserved="true"
+        android:padding="5dp"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.61"
+        tools:ignore="MissingConstraints">
 
 
         <!--Colum 1-->
         <android.support.v7.widget.CardView
-            android:layout_width="40dp"
-            android:layout_height="50dp"
+            android:layout_width="25dp"
+            android:layout_height="40dp"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
             app:cardCornerRadius="8dp"
@@ -63,6 +66,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -72,6 +76,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/img0"
                     android:layout_marginTop="-45dp"
                     android:gravity="center"
                     android:text="POLICE"
@@ -82,12 +87,11 @@
 
         <!--Colum 2-->
         <android.support.v7.widget.CardView
-            android:layout_width="40dp"
+            android:layout_width="25dp"
             android:layout_height="50dp"
-
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
             app:cardCornerRadius="8dp"
@@ -101,6 +105,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -110,6 +115,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/img1"
                     android:layout_marginTop="-45dp"
                     android:gravity="center"
                     android:text="HOPITAL"
@@ -120,14 +126,14 @@
 
         <!--Colum 3-->
         <android.support.v7.widget.CardView
-            android:layout_width="37dp"
-            android:layout_height="50dp"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="5dp"
             app:cardElevation="8dp">
 
             <LinearLayout
@@ -138,6 +144,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -147,6 +154,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/img2"
                     android:layout_marginTop="-45dp"
                     android:gravity="center"
                     android:text="POMPIER"
@@ -157,12 +165,11 @@
 
         <!--Colum 4-->
         <android.support.v7.widget.CardView
-            android:layout_width="40dp"
-            android:layout_height="50dp"
-
+            android:layout_width="25dp"
+            android:layout_height="40dp"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
             app:cardCornerRadius="8dp"
@@ -176,6 +183,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -185,7 +193,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="-45dp"
+                    android:layout_below="@id/img3"
+                    android:layout_marginTop="-40dp"
                     android:gravity="center"
                     android:text="FOTOALERT"
                     android:textColor="@android:color/holo_red_dark" />
@@ -195,12 +204,11 @@
 
         <!--Colum 5-->
         <android.support.v7.widget.CardView
-            android:layout_width="40dp"
-            android:layout_height="50dp"
-
+            android:layout_width="25dp"
+            android:layout_height="40dp"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
             app:cardCornerRadius="8dp"
@@ -214,6 +222,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -223,7 +232,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="-45dp"
+                    android:layout_below="@id/img4"
+                    android:layout_marginTop="-40dp"
                     android:gravity="center"
                     android:text="MEDI-INFO"
                     android:textColor="@android:color/holo_red_dark" />
@@ -233,12 +243,11 @@
 
         <!--Colum 6-->
         <android.support.v7.widget.CardView
-            android:layout_width="40dp"
-            android:layout_height="50dp"
-
+            android:layout_width="20dp"
+            android:layout_height="40dp"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
             app:cardCornerRadius="8dp"
@@ -252,6 +261,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -261,11 +271,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="-45dp"
+                    android:layout_below="@id/img5"
+                    android:layout_marginTop="-40dp"
                     android:gravity="center"
                     android:text="CONSEILS"
                     android:textColor="@android:color/holo_red_dark" />
-
             </LinearLayout>
         </android.support.v7.widget.CardView>
 

@@ -193,7 +193,5 @@
         android:text="Antecedent Medical : "
         android:textStyle="bold" />
 
-    -->
-
 
 </LinearLayout>

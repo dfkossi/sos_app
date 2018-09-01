@@ -44,7 +44,7 @@ public class FotoAlert extends AppCompatActivity {
 
         // btnSend.isEnabled()=true;
 
-   /*     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabcam);
+       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabcam);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,11 +52,11 @@ public class FotoAlert extends AppCompatActivity {
                 Intent intent =new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent,0);
             }
-        });   */
+        });
     }
 
 
-  /*  @Override
+   @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Bitmap bitmap = (Bitmap) data.getExtras().get("data");
         imageView.setImageBitmap(bitmap);
@@ -78,11 +78,12 @@ public class FotoAlert extends AppCompatActivity {
                     }
                 });
 
+
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
             }
 
         });
-    }   */
+    }
 }
